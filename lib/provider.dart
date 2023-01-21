@@ -35,9 +35,7 @@ class MusicProvider extends ChangeNotifier {
     });
   }
 
-  startAudio() {
-    _audioPlayer.setSourceAsset(musicPath);
-  }
+
 
 //handles pause and play in the UI
   pausePlayAudio() async {
@@ -57,16 +55,16 @@ class MusicProvider extends ChangeNotifier {
     // await _audioPlayer.resume();
   }
 
-  //set music audio on init
+  // //set music audio on init
 
-  Future setAudio() async {
-    //repeast song when completed to loop again , stop , currently on loop
-    _audioPlayer.setReleaseMode(ReleaseMode.loop);
+  // Future setAudio() async {
+  //   //repeast song when completed to loop again , stop , currently on loop
+  //   _audioPlayer.setReleaseMode(ReleaseMode.loop);
 
-    final player = AudioCache(prefix: '/assets');
-    final url = await player.load(musicPath);
-    _audioPlayer.setSourceAsset(url.path);
-  }
+  //   final player = AudioCache(prefix: '/assets');
+  //   final url = await player.load(musicPath);
+  //   _audioPlayer.setSourceAsset(url.path);
+  // }
 
   // disposeController() {
   //   _audioPlayer.dispose();
